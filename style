@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
-    --cor-de-fundo: #b9d6d8;
-    --verde: #f3b3c7;
-    --branco: #618683;
-    --botao-ativo: #eeb9ca;
-    --botao-inativo: rgba(169, 206, 206, 0.5);
-    --texto-fundo: rgba(134, 187, 194, 0.3);
+    --cor-de-fundo: #cad8d8;
+    --verde: #d492a7;
+    --branco: #79918f;
+    --botao-ativo: #f3d1dc;
+    --botao-inativo: rgb(212, 233, 233);
+    --texto-fundo: rgba(157, 187, 180, 0.3);
 }
 
 body {
@@ -36,8 +36,9 @@ body {
     color: var(--verde);
 }
 
+
 .botao {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -59,8 +60,52 @@ body {
 .botoes {
     display: block;
 }
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo-titulo-principal {
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador {
+    font-size: 20px;
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
-    .botao:last-child {
-      border-radius: 0 40px 0 0;
+    .botoes {
+        display: flex;
     }
-  }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
