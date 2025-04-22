@@ -2,16 +2,15 @@
 
 :root {
     --cor-de-fundo: #cad8d8;
-    --verde: #d492a7;
-    --branco: #79918f;
+    --rosa: #d492a7;
+    --ciano: #79918f;
     --botao-ativo: #f3d1dc;
-    --botao-inativo: rgb(212, 233, 233);
+    --botao-inativo:  rgb(212, 233, 233);
     --texto-fundo: rgba(157, 187, 180, 0.3);
-}
 
 body {
     background-color: var(--cor-de-fundo);
-    color: var(--branco);
+    color: var(--ciano);
     font-family: 'Chakra Petch', sans-serif;
 }
 
@@ -33,14 +32,14 @@ body {
 }
 
 .titulo-principal span {
-    color: var(--verde);
+    color: var(--rosa);
 }
 
 
 .botao {
     font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
-    color: var(--branco);
+    color: var(--ciano);
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -63,7 +62,7 @@ body {
 
 .botao.ativo {
     background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
+    border-bottom: 4px solid var(--rosa);
 }
 
 .abas-textos {
@@ -87,13 +86,33 @@ body {
 
 .aba-conteudo-titulo-secundario {
     text-align: center;
-    color: var(--verde);
+    color: var(--rosa);
     text-transform: uppercase;
 }
 
 .contador {
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito {
+    padding: 0 16px;
     text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero {
+    font-size: 80px;
+    margin: 0;
+
+}
+
+.contador-digito-texto {
+    color: var(--rosa);
+    font-size: 20px;
+    margin: 0;
+
 }
 
 @media screen and (min-width: 768px) {
